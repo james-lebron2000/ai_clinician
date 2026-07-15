@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "catalog_status": "empty_metadata_template",
+  "content_storage_policy": "metadata_locator_external_link_only_until_license_review",
+  "sources": [
+    {"organization": "NHC", "jurisdiction": "CN", "source_kind": "guideline", "approved_version": null, "license_status": "review_required"},
+    {"organization": "CSCO", "jurisdiction": "CN", "source_kind": "guideline", "approved_version": null, "license_status": "review_required"},
+    {"organization": "CACA", "jurisdiction": "CN", "source_kind": "guideline", "approved_version": null, "license_status": "review_required"},
+    {"organization": "NCCN", "jurisdiction": "US", "source_kind": "guideline", "approved_version": null, "license_status": "review_required"},
+    {"organization": "ASCO", "jurisdiction": "US", "source_kind": "guideline", "approved_version": null, "license_status": "review_required"},
+    {"organization": "ESMO", "jurisdiction": "INTERNATIONAL", "source_kind": "guideline", "approved_version": null, "license_status": "review_required"},
+    {"organization": "NMPA", "jurisdiction": "CN", "source_kind": "drug_label", "approved_version": null, "license_status": "review_required"},
+    {"organization": "FDA", "jurisdiction": "US", "source_kind": "drug_label", "approved_version": null, "license_status": "review_required"}
+  ]
+}
