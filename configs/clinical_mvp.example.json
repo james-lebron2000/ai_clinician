@@ -1,0 +1,48 @@
+{
+  "project_name": "AI Clinician CRC Continuum",
+  "context_of_use": "Research-only reconstruction of metastatic colorectal cancer timelines, candidate state discovery, and causal strategy evaluation; not diagnosis, prescribing, or automated clinical care.",
+  "raw_root_env": "AI_CLINICIAN_RAW_ROOT",
+  "derived_root_env": "AI_CLINICIAN_DERIVED_ROOT",
+  "offline_only": true,
+  "allow_cloud_extractors": false,
+  "header_rows": 4,
+  "split": {
+    "development": 0.70,
+    "tuning": 0.15,
+    "locked_test": 0.15
+  },
+  "timeline_gates": {
+    "require_complete_decision_time_manifest": true,
+    "critical_event_precision": 0.90,
+    "critical_event_recall": 0.90,
+    "treatment_line_macro_f1": 0.90,
+    "date_within_14_days": 0.90,
+    "cohen_kappa": 0.80,
+    "maximum_future_leakage": 0
+  },
+  "strategy_gates": {
+    "promotion_status": "blocked_until_deterministic_causal_audit_runner",
+    "minimum_eligible_patients": 1000,
+    "minimum_action_patients": 200,
+    "minimum_common_support": 0.80,
+    "minimum_weighted_effective_sample_size": 100,
+    "maximum_absolute_smd": 0.10,
+    "require_explicit_ood_status": true,
+    "require_negative_control": true,
+    "require_sensitivity_analysis": true,
+    "require_directional_method_consistency": true
+  },
+  "state_validation": {
+    "promotion_status": "blocked_until_locked_test_evaluator",
+    "minimum_bootstrap_ari": 0.75,
+    "calibration_slope_range": [0.8, 1.2],
+    "minimum_relative_brier_improvement": 0.05,
+    "minimum_clinical_expert_confirmations": 2
+  },
+  "governance": {
+    "api_loopback_only": true,
+    "role_bound_reviewer_credentials": true,
+    "automatic_orders_allowed": false,
+    "automatic_candidate_promotion_allowed": false
+  }
+}

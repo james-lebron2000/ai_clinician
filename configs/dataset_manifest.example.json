@@ -1,0 +1,35 @@
+{
+  "id": "dataset_example_v1",
+  "version": "1.0",
+  "title": "Example paired tissue dataset",
+  "source_name": "Replace with data controller",
+  "source_uri": "dms://controlled/example/v1",
+  "data_controller": "Example Institution",
+  "license_or_dua": "DUA-EXAMPLE-001",
+  "access_tier": "controlled",
+  "modalities": ["histopathology", "transcriptome"],
+  "biological_scales": ["tissue"],
+  "modality_scales": {
+    "histopathology": "tissue",
+    "transcriptome": "tissue"
+  },
+  "pairing_level": "same_specimen",
+  "subject_key_namespace": "example_site",
+  "subject_count": 100,
+  "specimen_count": 150,
+  "observation_count": 300,
+  "site_ids": ["SITE-01"],
+  "geography": ["CN"],
+  "allowed_uses": ["ai_training", "ai_validation"],
+  "permitted_compute_regions": ["CN"],
+  "derived_model_policy": "approved_environment_only",
+  "contains_direct_identifiers": false,
+  "deidentification_method": "site-held linkage key with project pseudonyms",
+  "file_formats": ["OME-TIFF", "Parquet"],
+  "checksum_manifest_uri": "dms://controlled/example/v1/checksums.json",
+  "ontology_versions": {
+    "CL": "replace-with-release",
+    "UBERON": "replace-with-release",
+    "MONDO": "replace-with-release"
+  }
+}

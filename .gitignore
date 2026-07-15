@@ -1,23 +1,64 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
-.vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-files
-*.bclicense
-*.flf
-#Test results file
-TestResults.xml
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.log
+.DS_Store
+
+# Clinical data and patient-level derivatives must never enter Git
+data/
+derived/
+raw/
+quarantine/
+patient_data/
+*.xlsx
+*.xlsm
+*.xlsb
+*.xls
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+*.feather
+*.arrow
+*.dcm
+*.nii
+*.nii.gz
+*.vcf
+*.cram
+*.bam
+
+# Databases, model artifacts, generated packages, and presentation outputs
+*.db*
+*.sqlite*
+models/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.h5
+*.pkl
+*.joblib
+regulatory_packages/
+outputs/
+*.pptx
+*.docx

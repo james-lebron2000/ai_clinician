@@ -1,0 +1,43 @@
+{
+  "name": "HumanFM-v0",
+  "version": "0.1.0",
+  "hidden_dim": 256,
+  "num_attention_heads": 8,
+  "modality_encoder_layers": 2,
+  "cross_scale_layers": 3,
+  "scale_latent_tokens": 4,
+  "maximum_tokens_per_modality": 512,
+  "dropout": 0.1,
+  "modality_input_dims": {
+    "genome": 768,
+    "single_cell": 768,
+    "spatial_omics": 768,
+    "microscopy": 1024,
+    "histopathology": 1024,
+    "radiology": 1024,
+    "physiological_waveform": 512,
+    "wearable": 256,
+    "laboratory": 256,
+    "medication": 256,
+    "diagnosis": 256,
+    "environment": 128
+  },
+  "modality_scales": {
+    "genome": "molecule",
+    "single_cell": "cell",
+    "spatial_omics": "tissue",
+    "microscopy": "tissue",
+    "histopathology": "tissue",
+    "radiology": "organ",
+    "physiological_waveform": "organ",
+    "wearable": "person",
+    "laboratory": "person",
+    "medication": "person",
+    "diagnosis": "person",
+    "environment": "population"
+  },
+  "active_scales": ["molecule", "cell", "tissue", "organ", "person", "population"],
+  "intervention_dim": 256,
+  "state_dim": 512,
+  "context_of_use": "Research-only representation, cross-modal retrieval and perturbation hypothesis generation across governed human data; not stand-alone diagnosis or treatment selection."
+}
